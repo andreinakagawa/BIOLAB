@@ -33,7 +33,7 @@ void setup() {
 void loop() {  
   adSample = analogRead(A0); //reads the ADC channel
   adMSB = adSample>>8; //retrieves msb
-  adLSB = adSample&0x0F; //retrieves lsb
+  adLSB = adSample&0xFF; //retrieves lsb
   //mounts the serial packet
   packet[0] = PKG_ST; //header
   packet[1] = adMSB; //data msb
